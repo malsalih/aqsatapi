@@ -13,14 +13,15 @@ return new class extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name')->unique();
             $table->string('phone');
-            $table->string('address');
-            $table->string('image');
-            $table->integer('balance');
-            $table->integer('qast');
-            $table->date('qast_period');
-            $table->dateTime('last_payment');
+            $table->string('address')->nullable();
+            $table->string('notes')->nullable();
+            $table->string('image')->nullable();
+            $table->integer('balance')->default(0);
+            $table->integer('qast')->default(0);
+            $table->foreignId('qast_period_id')->nullable();
+            $table->dateTime('last_payment')->nullable();
             $table->timestamps();
         });
     }

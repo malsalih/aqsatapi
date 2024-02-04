@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Customer;
+use App\Models\QastPeriod;
 use Illuminate\Http\Request;
 
-class CustomerController extends Controller
+class QastPeriodController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,6 @@ class CustomerController extends Controller
     public function index()
     {
         //
-        
     }
 
     /**
@@ -30,16 +29,12 @@ class CustomerController extends Controller
     public function store(Request $request)
     {
         //
-        $customer=new Customer();
-        $customer->fill( $request->all() );
-        $customer->save();
-        return $customer;
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Customer $customer)
+    public function show(QastPeriod $qastPeriod)
     {
         //
     }
@@ -47,7 +42,7 @@ class CustomerController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Customer $customer)
+    public function edit(QastPeriod $qastPeriod)
     {
         //
     }
@@ -55,7 +50,7 @@ class CustomerController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Customer $customer)
+    public function update(Request $request, QastPeriod $qastPeriod)
     {
         //
     }
@@ -63,7 +58,7 @@ class CustomerController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Customer $customer)
+    public function destroy(QastPeriod $qastPeriod)
     {
         //
     }
