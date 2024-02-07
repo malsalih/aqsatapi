@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AddCustomerRequest;
+use App\Models\Activity;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 
@@ -33,7 +34,11 @@ class CustomerController extends Controller
         $customer =new Customer();
         $customer->fill($request->all());
         $customer->save();
-        return $customer;
+        
+        return Activity::all();
+
+        // return $customer;
+        
     }
 
     /**

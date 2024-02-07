@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -91,6 +91,15 @@ return [
             'prefix_indexes' => true,
             // 'encrypt' => env('DB_ENCRYPT', 'yes'),
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
+        ],
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'url' => env('DATABASE_URL'),
+            'host' => env('ACTIVITY_LOGGER_DB_HOST', '127.0.0.1'),
+            'port' => env('ACTIVITY_LOGGER_DB_PORT', '27017'),
+            'database' => env('ACTIVITY_LOGGER_DB_DATABASE', 'aqsat_db'),
+            'username' => env('ACTIVITY_LOGGER_DB_USERNAME', ''),
+            'password' => env('ACTIVITY_LOGGER_DB_PASSWORD', ''),
         ],
 
     ],
