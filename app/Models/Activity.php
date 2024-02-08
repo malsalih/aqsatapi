@@ -49,7 +49,7 @@ class Activity extends Model implements ActivityContract
         'properties' => 'collection',
     ];
 
-    protected $collection = 'activity_log';
+    // protected $collection = 'activity_log';
 
     public function __construct(array $attributes = [])
     {

@@ -19,3 +19,5 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 Route::post('customer/add',[CustomerController::class,'addCustomer']);
+Route::get('customer/index',[CustomerController::class,'index']);
+
